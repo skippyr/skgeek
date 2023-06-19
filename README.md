@@ -14,7 +14,7 @@ The colors used in the theme may vary in your setup, as it depends on the termin
 
 ## Features
 
-The theme can show you:</p>
+The theme can show you:
 * Your user and hostname.
 * The name of source virtual environments.
 * Your current directory path base name.
