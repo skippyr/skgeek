@@ -1,97 +1,82 @@
-# skgeek
+# Skgeek
 
 ## Starting Point
 
-The skgeek project is a simple and comfortable dual-line ZSH theme that focus in giving compatibility with old terminal emulators, that can not render pretty symbols.
+The Skgeek project is a simple dual-line theme for the ZSH shell that focus on
+giving compatility to old terminal emulators, that can not render pretty
+symbols.
 
-Here is a preview that you can check out.
+This theme can be setup with a series of terminal emulators, themes and
+wallpapers. You can use following preview as a source of inspiration and
+reference to see what it can look like:
 
 ![](./images/preview.png)
 
-In the preview, the skgeek theme was used in the Kitty terminal with the [Flamerial theme](https://github.com/skippyr/flamerial). Font used was Inconsolata Nerd Font.
-
-The colors used in the theme may vary in your setup, as it depends on the terminal emulator's theme you are using.
+> In this preview, the Skgeek theme was used within the [Kitty terminal emulator](https://github.com/kovidgoyal/kitty)
+with the [Gruvbox Light theme](https://github.com/kovidgoyal/kitty-themes/blob/master/themes/gruvbox-light.conf).
+Font used is Hack Nerd Font. Wallpaper is [A window with a sign on it by Robert Katzki](https://unsplash.com/photos/zzqw25Oa51A) from Unsplash.
 
 ## Features
 
-The theme can show you:
+This theme can show you the following information:
+
 * Your user and hostname.
-* The name of source virtual environments.
-* Your current directory path base name.
-* The branch and if it has changes, if inside a Git repository.
+* The name of sourced virtual environments.
+* Your current directory.
+* If inside a Git repository, the name of the branch and if there are changes
+  to be commited.
 * The exit code of failed commands.
 
-## Installation And Usage
+## Dependencies
 
-For any installation, you need to first install the dependencies required for it to work:
+This theme has some dependencies that you need to download before installing it.
 
-* Install `git`.
+* git
 
-	This tool is used to get information about your repositories.
+    This is the terminal utility used to obtain information about your Git
+    repositories.
 
+## Installation
 
-After installing those, it is time to choose a method to install it. Choose the one that best fits your needs.
+You can install this theme in multiple ways, use the one that suits you best.
 
-### Installing Manually (recommended)
+### Manually
 
-By installing it manually, you do not need to download any more dependencies. Due to this, it is the recommeded choice for most users.
+* Run the following command to install the theme at
+  `~/.local/share/zsh/themes/skgeek`.
 
-Follow these steps:
+    ```bash
+    git clone --depth=1 https://github.com/skippyr/skgeek ~/.local/share/zsh/themes/skgeek &&
+    echo "source \"${HOME}/.local/share/zsh/themes/skgeek/skgeek.zsh-theme\"" >> ~/.zshrc
+    ```
 
-* Clone this repository.
+* Reopen your terminal emulator.
 
-	For these examples, the theme will be installed at `~/.local/share/zsh/themes` to keep things organized.
+### Within OhMyZSH
 
-	```bash
-	git clone --depth=1 https://github.com/skippyr/skgeek ~/.local/share/zsh/themes/skgeek
-	```
+* Install the theme in OhMyZSH custom themes' directory.
 
-* Add a source rule in your `~/.zshrc` file to include that theme you just cloned.
+    ```bash
+    git clone --depth=1 https://github.com/skippyr/skgeek ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/skgeek
+    ```
 
-	```bash
-	source ~/.local/share/zsh/themes/skgeek/skgeek.zsh-theme
-	```
+* Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
+  `~/.zshrc`, to use the theme.
 
-+ Reopen your ZSH session.
+    ```bash
+    ZSH_THEME="skgeek/skgeek"
+    ```
 
-That finished the installation. The theme now should be ready for you to use.
+* Reopen your terminal emulator.
 
-### Installing On Top Of OhMyZSH
+## Issues And Contributions
 
-Installing it on top of the OhMyZSH framework requires specific instructions due to its directory structure.
-
-Follow these steps:
-
-* Install the [OhMyZSH framework](https://github.com/ohmyzsh/ohmyzsh).
-
-	Information about how to install it can be found in its repository on GitHub.
-
-* Clone this repository to the OhMyZSH's custom themes directory.
-
-	```bash
-	git clone --depth=1 https://github.com/skippyr/skgeek ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/skgeek
-	```
-
-* Change the value of the variable `ZSH_THEME` in your `~/.zshrc` to use the theme you cloned.
-
-	```bash
-	ZSH_THEME="skgeek/skgeek"
-	```
-
-* Reopen your ZSH session.
-
-That finished the installation. The theme now should be ready for you to use.
-
-## Issues
-
-Report issues through the [issues tabs](https://github.com/skippyr/skgeek/issues).
-
-## Contributions
-
-If you want to contribute to this project, check out its [contributions guidelines](https://skippyr.github.io/materials/pages/contributions_guidelines.html).
+Learn how to report issues and contribute to this project by reading its
+[contributions guidelines](https://skippyr.github.io/materials/pages/contributions_guidelines.html).
 
 ## License
 
-This project is released under the terms of the MIT license.
+This project is released under the terms of the MIT license. A copy of the
+license is bundled with the source code.
 
-Copyright (c) 2023, Sherman Rofeman. MIT License.
+Copyright (c) 2023, Sherman Rofeman. MIT license.
