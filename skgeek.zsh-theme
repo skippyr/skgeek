@@ -18,7 +18,8 @@ __Skgeek()
 		typeset -r b=$(git branch --show-current 2>/dev/null)
 		[[ -n $b ]] && echo " on %F{3}$b$(Get_Changes)%f"
 	}
-	echo "%F{3}%n%F{1}@%F{6}%m%f$(Get_Virtual_Environment) in %F{1}%1~%f$(Get_Branch)%(?.. status %F{5}%?%f)"
+	echo "%F{3}%n%F{1}@%F{6}%m%f$(Get_Virtual_Environment) in"\
+	     "%F{1}%1~%f$(Get_Branch)%(?.. status %F{5}%?%f)"
 }
 
 PROMPT='$(__Skgeek)
