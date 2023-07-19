@@ -1,81 +1,72 @@
 # Skgeek
 
-## Starting Point
+## Description
 
-The Skgeek project is a simple dual-line theme for the ZSH shell that focus on
-giving compatility to old terminal emulators, that can not render pretty
-symbols.
+A simple dual-line theme for the ZSH shell.
 
-This theme can be setup with a series of terminal emulators, themes and
-wallpapers. You can use following preview as a source of inspiration and
-reference to see what it can look like:
+![](images/preview.png)
 
-![](./images/preview.png)
-
-> In this preview, the Skgeek theme was used within the [Kitty terminal emulator](https://github.com/kovidgoyal/kitty)
-with the [Gruvbox Light theme](https://github.com/kovidgoyal/kitty-themes/blob/master/themes/gruvbox-light.conf).
-Font used is Hack Nerd Font. Wallpaper is [A window with a sign on it by Robert Katzki](https://unsplash.com/photos/zzqw25Oa51A) from Unsplash.
-
-## Features
-
-This theme can show you the following information:
-
-* Your user and hostname.
-* The name of sourced virtual environments.
-* Your current directory.
-* If inside a Git repository, the name of the branch and if there are changes
-  to be commited.
-* The exit code of failed commands.
-
-## Dependencies
-
-This theme has some dependencies that you need to download before installing it.
-
-* git
-
-    This is the terminal utility used to obtain information about your Git
-    repositories.
+Here is a description of its design:
+-	Your host and user names will appear concatenated with an `@`.
+-	Sourced virtual environments will appear with a Python icon preceded by
+	`using`.
+-	Your current directory will appear preceded by `in`.
+-	If inside a Git repository. The current branch will appear preceded by `on`.
+	If there are changes to be commited an `*` symbol will appear inside
+	parenthesis next to the branch name.
+-	If your last command failed, its exit code will appear preceded by `status`.
 
 ## Installation
 
-You can install this theme in multiple ways, use the one that suits you best.
+### Dependencies
 
-### Manually
+The following dependencies must be installed to run this software:
 
-* Run the following command to install the theme at
-  `~/.local/share/zsh/themes/skgeek`.
+| Dependency | Description |
+|-|-|
+| `git` | Required to retrive information about Git repositories. |
 
-    ```bash
-    git clone --depth=1 https://github.com/skippyr/skgeek ~/.local/share/zsh/themes/skgeek &&
-    echo "source \"${HOME}/.local/share/zsh/themes/skgeek/skgeek.zsh-theme\"" >> ~/.zshrc
-    ```
+### Manual Procedures
 
-* Reopen your terminal emulator.
+Use the following instructions to install this theme manually.
 
-### Within OhMyZSH
+-	Run the following command inside of a terminal emulator to install the theme.
+```bash
+git clone --depth=1 https://github.com/skippyr/skgeek\
+                    ~/.local/share/zsh/themes/skgeek &&
+echo "source ~/.local/share/zsh/themes/skgeek/skgeek.zsh-theme" >> ~/.zshrc
+```
 
-* Install the theme in OhMyZSH custom themes' directory.
+-	Reopen the terminal emulator to load the theme.
 
-    ```bash
-    git clone --depth=1 https://github.com/skippyr/skgeek ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/skgeek
-    ```
+### Procedures With OhMyZSH
 
-* Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
-  `~/.zshrc`, to use the theme.
+Use the following instructions to install this theme for OhMyZSH.
 
-    ```bash
-    ZSH_THEME="skgeek/skgeek"
-    ```
+-	Run the following command inside of a terminal emulator to install the theme.
 
-* Reopen your terminal emulator.
+```bash
+git clone --depth=1 https://github.com/skippyr/skgeek\
+                    ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/skgeek
+```
 
-## Issues And Suggestions
+-	Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
+	`~/.zshrc`, to use the theme:
 
-Report issues and suggestions through the [issues tab](https://github.com/skippyr/skgeek/issues).
+```bash
+ZSH_THEME=skgeek/skgeek
+```
 
-## License
+-	Reopen your terminal emulator to load the theme.
 
-This project is released under the terms of the MIT license. A copy of the
-license is bundled with the source code.
+## Support
+
+Report issues, questions and suggestion through the [issues tab](https://github.com/skippyr/skgeek/issues).
+
+## Copyright
+
+This software is distributed under the MIT License. A copy of the license is
+bundled with the source code.
 
 Copyright (c) 2023, Sherman Rofeman. MIT license.
+
