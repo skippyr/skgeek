@@ -1,72 +1,83 @@
 # Skgeek
 
-## Description
+## About
 
-A simple dual-line theme for the ZSH shell.
+A simple theme for the ZSH shell.
 
-![](images/preview.png)
+![](preview.png)
 
-Here is a description of its design:
--	Your host and user names will appear concatenated with an `@`.
--	Sourced virtual environments will appear with a Python icon preceded by
-	`using`.
--	Your current directory will appear preceded by `in`.
--	If inside a Git repository. The current branch will appear preceded by `on`.
-	If there are changes to be commited an `*` symbol will appear inside
-	parenthesis next to the branch name.
--	If your last command failed, its exit code will appear preceded by `status`.
+> **Note**
+>
+> The theme may look different from the preview in your setup, as its
+> appeareance also depends on your terminal emulator's theme and font. The
+> theme used is [Flamerial](https://github.com/skippyr/flamerial).
+
+### Features
+
+These are the features this theme brings on:
+
+-   It shows the name of sourced virtual environment.
+-   It shows your current directory path abbreviating parent directories by
+    their initials.
+-   If inside a Git repository, it shows the name of the branch and if there are
+    changes to be commited.
+-   If your last command failed, it shows its exit code.
 
 ## Installation
 
 ### Dependencies
 
-The following dependencies must be installed to run this software:
+This software requires that the following dependencies are installed to run
+properly:
 
 | Dependency | Description |
 |-|-|
-| `git` | Required to retrive information about Git repositories. |
+| `git` | required to provide support to Git repositories. | 
 
-### Manual Procedures
+### Procedures
 
-Use the following instructions to install this theme manually.
+Using a terminal emulator, follow these steps:
 
--	Run the following command inside of a terminal emulator to install the theme.
-```bash
-git clone --depth=1 https://github.com/skippyr/skgeek\
-                    ~/.local/share/zsh/themes/skgeek &&
-echo "source ~/.local/share/zsh/themes/skgeek/skgeek.zsh-theme" >> ~/.zshrc
-```
-
--	Reopen the terminal emulator to load the theme.
-
-### Procedures With OhMyZSH
-
-Use the following instructions to install this theme for OhMyZSH.
-
--	Run the following command inside of a terminal emulator to install the theme.
+-   Clone this repository.
 
 ```bash
-git clone --depth=1 https://github.com/skippyr/skgeek\
-                    ${ZSH_CUSTOM:-${HOME}/.oh-my-zsh/custom}/themes/skgeek
+git\
+    clone --depth=1 https://github.com/skippyr/skgeek\
+    ~/.local/share/zsh/themes/skgeek
 ```
 
--	Change the value of the `ZSH_THEME` variable in your ZSH configuration file,
-	`~/.zshrc`, to use the theme:
+-   Add the following source rule to your `~/.zshrc` file. Ensure that you are
+    not sourcing any other theme to do not cause conflicts.
 
 ```bash
-ZSH_THEME=skgeek/skgeek
+source ~/.local/share/zsh/themes/skgeek/skgeek.zsh-theme
 ```
 
--	Reopen your terminal emulator to load the theme.
+-   Reopen your terminal emulator to reload your ZSH session in order to load
+    the theme.
+
+## Uninstallation
+
+Using a terminal emulator, follow these steps:
+
+-   Remove the theme's directory.
+
+```bash
+rm -rf ~/.local/share/zsh/themes/skgeek
+```
+
+-   Remove the source rule that you have written in the `~/.zshrc` file during
+    the installation.
+-   Reopen your terminal emulator to reload your ZSH session in order to load
+    the default theme.
 
 ## Support
 
-Report issues, questions and suggestion through the [issues tab](https://github.com/skippyr/skgeek/issues).
+Report issues, questions or suggestions through the [issues tab](https://github.com/skippyr/skgeek/issues).
 
 ## Copyright
 
-This software is distributed under the MIT License. A copy of the license is
+This software is licensed under the MIT License. A copy of the license is
 bundled with the source code.
 
-Copyright (c) 2023, Sherman Rofeman. MIT license.
-
+Copyright (c) Sherman Rofeman. MIT license.
