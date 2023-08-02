@@ -15,8 +15,8 @@ __Skgeek()
 
 	Get_Branch()
 	{
-		typeset -r b=$(git branch --show-current 2>/dev/null)
-		[[ ${b} ]] && echo " on %F{3}${b}$(Get_Changes)%f"
+		typeset -r branch=$(git branch --show-current 2>/dev/null)
+		[[ ${branch} ]] && echo " on %F{3}${branch}$(Get_Changes)%f"
 	}
 
 	echo\
