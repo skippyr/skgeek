@@ -1,7 +1,7 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-_Skgeek()
+__Skgeek()
 {
 	Get_Virtual_Environment()
 	{
@@ -24,4 +24,4 @@ _Skgeek()
 		"%F{1}%1~%f$(Get_Branch)%(?.. status %F{5}%?%f)\n$ "
 }
 
-PROMPT='$(_Skgeek)'
+PROMPT='$(__Skgeek)'
