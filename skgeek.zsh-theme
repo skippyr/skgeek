@@ -19,8 +19,8 @@ __Skgeek()
         [[ ${branch} ]] && echo " on %F{3}${branch}$(Get_Changes)%f"
     }
 
-    echo\
-        "%F{3}%n%F{1}@%F{6}%m%f$(Get_Virtual_Environment) in"\
+    echo                                                                       \
+        "%F{3}%n%F{1}@%F{6}%m%f$(Get_Virtual_Environment) in"                  \
         "%F{1}%1~%f$(Get_Branch)%(?.. status %F{5}%?%f)\n$ "
 }
 
