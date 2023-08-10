@@ -1,19 +1,19 @@
 setopt promptsubst
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-__Skgeek()
+function __Skgeek()
 {
-    Get_Virtual_Environment()
+    function Get_Virtual_Environment()
     {
         [[ ${VIRTUAL_ENV} ]] && echo " using %F{4}${VIRTUAL_ENV##*/}%f"
     }
 
-    Get_Changes()
+    function Get_Changes()
     {
         [[ $(git status --porcelain 2>/dev/null) ]] && echo "*"
     }
 
-    Get_Branch()
+    function Get_Branch()
     {
         typeset -r branch=$(git branch --show-current 2>/dev/null)
         [[ ${branch} ]] && echo " on %F{3}${branch}$(Get_Changes)%f"
